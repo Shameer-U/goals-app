@@ -1,0 +1,21 @@
+{
+  "name": "goals-app",
+  "version": "1.0.0",
+  "description": "goal setter app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js"
+  },
+  "author": "Shameer U Shahul",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mogoose": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
