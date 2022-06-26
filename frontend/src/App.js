@@ -5,6 +5,8 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import {ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import UpdateGoal from './pages/UpdateGoal'
+import UpdateGoal1 from './pages/UpdateGoal1'
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
                 <Route path='/' element={<Dashboard />}></Route>
                 <Route path='/login' element={<Login />}></Route>
                 <Route path='/register' element={<Register />}></Route>
+                {/* <Route path="/goal/:goalId" exact element={ <UpdateGoal1 /> } /> */} {/*This also works*/}
+                <Route path="/goal/:goalId" exact element={ <UpdateGoal /> } />
             </Routes>
         </div>
       </Router>
