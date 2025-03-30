@@ -1,11 +1,23 @@
-// @ts-nocheck
 import axios from "axios";
 
 const API_URL = "/api/goals/";
+interface Goal {
+  id?: string;
+  title: string;
+  description?: string;
+  createdAt?: string;
+  updatedAt?: string;
+}
+
+interface Config {
+  headers: {
+    Authorization: string;
+  };
+}
 
 //Create new goal
-const createGoal = async (goalData, token) => {
-  const config = {
+const createGoal = async (goalData: Goal, token: string): Promise<Goal> => {
+  const config: Config = {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -17,8 +29,8 @@ const createGoal = async (goalData, token) => {
 };
 
 //Get user goals
-const getGoals = async (token) => {
-  const config = {
+const getGoals = async (token: string): Promise<Goal[]> => {
+  const config: Config = {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -30,7 +42,10 @@ const getGoals = async (token) => {
 };
 
 //Delete user goal
-const deleteGoal = async (goalId, token) => {
+const deleteGoal = async (
+  goalId: string,
+  token: string,
+): Promise<{ message: string }> => {
   const config = {
     headers: {
       Authorization: `Bearer ${token}`,

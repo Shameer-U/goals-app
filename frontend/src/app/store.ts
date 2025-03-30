@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import authReducer from "../features/auth/authSlice";
 import goalReducer from "../features/goals/goalSlice";
@@ -33,3 +32,6 @@ export const store = configureStore({
 });
 
 export const persistor = persistStore(store);
+
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;

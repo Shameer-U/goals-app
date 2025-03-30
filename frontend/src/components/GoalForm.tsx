@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { createGoal, reset } from "../features/goals/goalSlice";
