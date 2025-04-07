@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { useDispatch } from "react-redux";
 import { deleteGoal } from "../features/goals/goalSlice";
 import { Link, useNavigate } from "react-router-dom";

@@ -1,4 +1,3 @@
-// @ts-nocheck
 function Spinner() {
   return (
     <div className="loadingSpinnerContainer">
